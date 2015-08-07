@@ -1,9 +1,8 @@
 class SessionsController < ApplicationController
   def new
+    if session[:state].present? && session[:state] == params[:state]
+      # redirect_to root_url, alert: 'Ошибка авторизации, попробуйте войти еще раз.'
 
-    if session[:state].present? && session[:state] != params[:state]
-      redirect_to root_url, alert: 'Ошибка авторизации, попробуйте войти еще раз.' and return
-    else
 
     # получение токена
     @vk = VkontakteApi.authorize(code: params[:code])
@@ -14,7 +13,7 @@ class SessionsController < ApplicationController
 
     redirect_to root_url
 
-
+    else
     srand
     session[:state] ||= Digest::MD5.hexdigest(rand.to_s)
     #URL страницы авторизации
