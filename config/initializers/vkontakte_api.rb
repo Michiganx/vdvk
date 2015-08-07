@@ -3,7 +3,7 @@ VkontakteApi.configure do |config|
   #hosted
   config.app_id       = '5020822'
   config.app_secret   = '33JQffS1sjB7WcAJbzh5'
-  config.redirect_uri = 'vdolgah.herokuapp.com/callback'
+  config.redirect_uri = 'vdolgah.herokuapp.com/login'
 
   #local
   # config.app_id       = '5024630'
