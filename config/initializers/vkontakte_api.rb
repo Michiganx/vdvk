@@ -1,14 +1,14 @@
 VkontakteApi.configure do |config|
   # Authorization parameters (not needed when using an external authorization):
   #hosted
-  # config.app_id       = '5020822'
-  # config.app_secret   = '33JQffS1sjB7WcAJbzh5'
-  # config.redirect_uri = 'vdolgah.herokuapp.com/login'
+  config.app_id       = '5020822'
+  config.app_secret   = '33JQffS1sjB7WcAJbzh5'
+  config.redirect_uri = 'vdolgah.herokuapp.com/login'
 
   #local
-  config.app_id       = '5024630'
-  config.app_secret   = 'DWu2oHbM0ORi5cWhbIai'
-  config.redirect_uri = '127.0.0.1:3000/login'
+  # config.app_id       = '5024630'
+  # config.app_secret   = 'DWu2oHbM0ORi5cWhbIai'
+  # config.redirect_uri = '127.0.0.1:3000/login'
 
   
   # Faraday adapter to make requests with:
