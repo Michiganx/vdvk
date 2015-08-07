@@ -1,6 +1,14 @@
+require 'logged_in_constraint'
+
 Rails.application.routes.draw do
 
-  root :to => "static_pages#home"
+    get 'callback'  => 'sessions#callback'
+    delete 'logout' => 'sessions#destroy'
+
+    root to: 'static_pages#home', constraints: LoggedInConstraint.new
+    # root to: 'sessions#new'
+
+
 
   get 'static_pages/index'
 
